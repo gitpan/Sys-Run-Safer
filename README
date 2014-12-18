@@ -2,7 +2,7 @@ NAME
     Sys::Run::Safer - Run external commands, with a safer API
 
 VERSION
-    This document describes version 0.01 of Sys::Run::Safer (from Perl
+    This document describes version 0.02 of Sys::Run::Safer (from Perl
     distribution Sys-Run-Safer), released on 2014-12-18.
 
 SYNOPSIS
@@ -13,9 +13,9 @@ SYNOPSIS
          args => ['file1', 'file2', 'dir1'],
      ) == 0 or die;
 
-    Will run "system('rm', '-r', '--force', '--interactive=never', '--',
-    'file1', 'file2', 'dir1')". Upon failure ($? is not zero), will print
-    diagnostic error message. Return value is the same as Perl's "system()".
+    Will run "system('rm', '-rf', '--interactive=never', '--', 'file1',
+    'file2', 'dir1')". Upon failure ($? is not zero), will print diagnostic
+    error message. Return value is the same as Perl's "system()".
 
 DESCRIPTION
     Status: experimental, prone to change.

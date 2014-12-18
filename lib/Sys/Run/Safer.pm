@@ -1,7 +1,7 @@
 package Sys::Run::Safer;
 
 our $DATE = '2014-12-18'; # DATE
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 use 5.010001;
 use strict;
@@ -70,7 +70,7 @@ Sys::Run::Safer - Run external commands, with a safer API
 
 =head1 VERSION
 
-This document describes version 0.01 of Sys::Run::Safer (from Perl distribution Sys-Run-Safer), released on 2014-12-18.
+This document describes version 0.02 of Sys::Run::Safer (from Perl distribution Sys-Run-Safer), released on 2014-12-18.
 
 =head1 SYNOPSIS
 
@@ -81,9 +81,9 @@ This document describes version 0.01 of Sys::Run::Safer (from Perl distribution 
      args => ['file1', 'file2', 'dir1'],
  ) == 0 or die;
 
-Will run C<system('rm', '-r', '--force', '--interactive=never', '--', 'file1',
-'file2', 'dir1')>. Upon failure (C<$?> is not zero), will print diagnostic error
-message. Return value is the same as Perl's C<system()>.
+Will run C<system('rm', '-rf', '--interactive=never', '--', 'file1', 'file2',
+'dir1')>. Upon failure (C<$?> is not zero), will print diagnostic error message.
+Return value is the same as Perl's C<system()>.
 
 =head1 DESCRIPTION
 
